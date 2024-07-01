@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="reservation-panel">
+        <div class="form-container">
+            <h2>Reservar Asiento</h2>
+            <form (ngSubmit)="makeReservation()">
+                <div class="form-group">
+                    <label for="reservePhone">Teléfono del Cliente:</label>
+                    <input id="reservePhone" type="text" [(ngModel)]="reservePhone" name="reservePhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="reserveName">Nombre del Cliente:</label>
+                    <input id="reserveName" type="text" [(ngModel)]="reserveName" name="reserveName" required>
+                </div>
+                <div class="form-group">
+                    <label for="reserveFlight">Número de Vuelo:</label>
+                    <select id="reserveFlight" [(ngModel)]="reserveFlight" name="reserveFlight" required>
+                        <option *ngFor="let flight of flights_desplegable" [value]="flight">{{ flight }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seatSection">Sección de Asiento:</label>
+                    <select id="seatSection" [(ngModel)]="seatSection" name="seatSection" required>
+                        <option *ngFor="let section of seatSections" [value]="section">{{ section }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seatNumber">Número de Asiento:</label>
+                    <select id="seatNumber" [(ngModel)]="seatNumber" name="seatNumber" required>
+                        <option *ngFor="let number of seatNumbers" [value]="number">{{ number }}</option>
+                    </select>
+                </div>
+                <button type="submit" class="reserve-button">Reservar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="search-panel">
+        <div class="search-container">
+            <input type="text" placeholder="Ingrese número de teléfono" [(ngModel)]="phoneNumber" class="search-input">
+            <button (click)="searchReservations()" class="search-button">Buscar</button>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" *ngFor="let reservation of seat_client">
+                <div class="card-header">
+                    <p class="flight-number">VUELO:  <span>{{ reservation.flightNumber }}</span></p>
+                    <p class="seat-number">ASIENTO: <span>{{ reservation.seatNumber }}</span></p>
+                </div>
+                <div class="card-details">
+                    <p><strong>Nombre del Cliente:</strong> {{ reservation.customerName }}</p>
+                    <p><strong>Número de Tramo:</strong> {{ reservation.legNumber }}</p>
+                    <p><strong>Fecha de Tramo:</strong> {{ reservation.legDate }}</p>
+                    <p><strong>Teléfono del Cliente:</strong> {{ reservation.customerPhone }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

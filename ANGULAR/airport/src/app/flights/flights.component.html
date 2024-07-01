@@ -1,0 +1,34 @@
+<div class="flights-container">
+    <h2>Lista de Vuelos</h2>
+    <div class="flight-card blue-margin" *ngFor="let flight of data; let i = index">
+        <div class="flight-info">
+            <div class="flight-details">
+                <h3>{{ flight.flightNumber }}</h3>
+                <p><strong>Aerolinea:</strong> {{ flight.airline }}</p>
+                <p><strong>Origen:</strong> {{ flight.departureAirport.airportCode }} - {{ flight.departureAirport.airportName }}</p>
+                <p><strong>Destino:</strong> {{ flight.arrivalAirport.airportCode }} - {{ flight.arrivalAirport.airportName }}</p>
+                <p><strong>Días de salida:</strong> {{ flight.weekdays }}</p>
+            </div>
+            <div class="flight-icon-container" *ngIf="fares[i]">
+                <p>Tarifa:</p>
+                <div class="flight-icon">
+                    <span>{{ fares[i].fareCode }}</span>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
+        <h3 class="details-heading">Detalles de vuelo:</h3>
+        <div class="flight-legs" *ngIf="legs[i]">
+            <p><strong>Hora de Salida:</strong> {{ legs[i].departureTime }}</p>
+            <p><strong>Hora de Llegada:</strong> {{ legs[i].arrivalTime }}</p>
+            <p><strong>Número de Asientos Disponibles:</strong> {{ legs[i].numberOfAvailableSeats }}</p>
+        </div>
+        <hr class="divider">
+        <h3 class="details-heading">Detalles de Tarifa:</h3>
+        <div class="flight-legs" *ngIf="fares[i]">
+            <p><strong>Precio:</strong> {{ fares[i].amount }}</p>
+            <p><strong>Restricciones:</strong> {{ fares[i].restrictions }}</p>
+            <p><strong>Código:</strong> {{ fares[i].fareCode }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+/* Section Titles */
+section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Bienvenida Section */
+#bienvenida {
+    background-color: #f8f9fa;
+}
+
+#bienvenida p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Historia Section */
+#historia {
+    background-color: #e9ecef;
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+}
+
+/* Servicios Section */
+#servicios {
+    background-color: #f8f9fa;
+}
+
+#servicios .row > div {
+    margin-bottom: 1.5rem;
+}
+
+#servicios img {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Vuelos Section */
+#vuelos {
+    background-color: #e9ecef;
+}
+
+#vuelos p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contacto Section */
+#contacto {
+    background-color: #f8f9fa;
+}
+
+#contacto p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Redes Sociales */
+#contacto .btn {
+    margin: 0.5rem;
+}
+
+/* Ubicación Section */
+#ubicacion {
+    background-color: #e9ecef;
+}
+
+#ubicacion p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5rem 0;
+}

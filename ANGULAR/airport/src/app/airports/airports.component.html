@@ -1,0 +1,12 @@
+<div class="airport-container">
+    <h2>Lista de Aereopuertos</h2>
+    <div class="airport-card" *ngFor="let airport of airports">
+      <div class="airport-info">
+        <h3>{{ airport.airportCode }}</h3>
+        <p><strong>Nombre:</strong> {{ airport.airportName }}</p>
+        <p><strong>Pais:</strong> {{ airport.state }}</p>
+        <p><strong>Ciudad:</strong> {{ airport.city }}</p>
+       
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,113 @@
+.flights-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.flight-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+}
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flight-details h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+.flight-details p {
+    margin: 0;
+    color: #555;
+}
+
+.flight-details p strong {
+    color: #333;
+}
+
+.flight-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px; /* Incrementar espacio entre los detalles y la letra */
+}
+
+.flight-icon-container p {
+    margin: 0 0 10px 0; /* Espacio entre "Tarifa:" y el icono */
+    color: #007bff;
+    font-weight: bold;
+}
+
+.flight-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.divider {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.details-heading {
+    color: #007bff; /* Mismo color que el número de vuelo */
+    margin: 10px 0;
+}
+
+.flight-legs {
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.flight-legs p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.flight-legs p strong {
+    color: #333;
+}
+
+/* Clase para margen azul */
+.blue-margin {
+    border: 2px solid #007bff;
+    padding: 80px;
+}
+
+  
